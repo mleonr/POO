@@ -1,0 +1,74 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}  
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Marcos León Reyes / 2CM2}
+\begin{document}
+\title{Práctica 1\\Simulación de un cajero automático}
+\author{Marcos León Reyes, 2CM2}
+\date{}
+\maketitle
+
+Preguntas:
+
+\vspace{5mm}
+1.- ¿En qué paquete se encuentra la clase JOptionPane?
+
+javax..swing
+
+\vspace{5mm}
+	
+2.- Mediante el uso de JOptionPane, ¿Cómo se crea un diálogo de mensaje?
+\begin{lstlisting}[language=Java]
+JOptionPane.showMessageDialog(
+Componente padre, 
+mensaje, 
+titulo del mensaje,
+tipo de mensaje);
+\end{lstlisting}
+
+3.-¿Cómo se puede modificar el ícono del tipo del diálogo de mensaje?, ¿Cuáles son?
+
+Se debe modificar dentro de la estructura del mensaje el parámetro "tipo de mensaje".
+\begin{lstlisting}[language=Java]
+Tipos de mensaje;
+ERROR_MESSAGE
+INFORMATION_MESSAGE
+WARNING_MESSAGE
+QUESTION_MESSAGE
+PLAIN_MESSAGE
+\end{lstlisting}
+
+4.- Mediante el uso de JOptionPane, ¿Cómo se crea un diáogo de entrada en el que el usuario tiene que teclear un valor?, ¿De qué tipo es la entrada que el diálogo regresa?, ¿Cómo se realiza la conversión  del tipo de la entrada de ese diálogo a flotante?
+\begin{lstlisting}[language=Java]
+String cadenadeEntrada = JOptionPane.showInputDialog(Mensaje);
+\end{lstlisting}
+
+La entrada que el diálogo regresa es de de tipo String.
+
+Conversión a flotante:
+\begin{lstlisting}[language=Java]
+float f = Float.parseFloat(cadenadeEntrada);
+\end{lstlisting}
+
+\vspace{30mm}
+
+5.- Mediante el uso de JOptionPane, ¿Cómo se crea un diálogo de entrada en el que el usuario tiene que seleccionar un valor de una lista?, ¿De qué tipo es la entrada que el diálogo regresa?
+\begin{lstlisting}[language=Java]
+Objeto[] opciones = { "Primero", "Segundo", "Tercero"};
+ObjetoSeleccionado= JOptionPane.showInputDialog(Componente padre,
+mensaje, titulo del mensaje,
+tipo de mensaje, Icono,
+nombredeArregloOpciones, OpcionDefault);
+\end{lstlisting}
+
+La entrada que el diálogo regresa es de tipo objeto.
+
+
+
+
+\end{document}
